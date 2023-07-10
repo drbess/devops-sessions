@@ -1,3 +1,6 @@
+steps:
+  - label: ":pipeline:"
+    command: buildkite-agent pipeline upload
 
 steps:
   - name: ":python:"
