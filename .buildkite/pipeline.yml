@@ -1,10 +1,11 @@
+
+steps:
+  - commands:
+    - "npm install && npm test"
+    - "moretests.sh"
+    - "build.sh"
+
 steps:
   - label: ":pipeline:"
     command: buildkite-agent pipeline upload
 
-steps:
-  - name: ":python:"
-    command: "py.test"
-    plugins:
-      - docker-compose#v3.7.0:
-          run: app
