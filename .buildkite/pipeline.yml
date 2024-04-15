@@ -1,0 +1,11 @@
+
+steps:
+  - commands:
+    - "npm install && npm test"
+    - "moretests.sh"
+    - "build.sh"
+
+steps:
+  - label: ":pipeline:"
+    command: buildkite-agent pipeline upload
+
